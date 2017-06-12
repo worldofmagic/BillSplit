@@ -54,7 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetFileContent.cs" />
+    <Compile Include="DataAnalysis.cs" />
+    <Compile Include="ReadFile.cs" />
     <Compile Include="GetGroupIndex.cs" />
     <Compile Include="GetPersonBill.cs" />
     <Compile Include="GetPersonIndex.cs" />

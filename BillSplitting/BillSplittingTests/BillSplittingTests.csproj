@@ -56,11 +56,12 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="GetFileContentTests.cs" />
+    <Compile Include="DataAnalysisTests.cs" />
     <Compile Include="GetGroupIndexTests.cs" />
     <Compile Include="GetPersonBillTests.cs" />
     <Compile Include="GetPersonIndexTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadFileTests.cs" />
     <Compile Include="WriteResultTests.cs" />
   </ItemGroup>
   <ItemGroup>

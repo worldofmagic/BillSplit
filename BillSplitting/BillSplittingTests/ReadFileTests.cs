@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 namespace BillSplitting.Tests
 {
     [TestClass()]
-    public class GetFileContentTests
+    public class ReadFileTests
     {
         [TestMethod()]
-        public void GetDataFromFileTest()
+        public void dataTest()
         {
             string path = @"D:\resource\test.txt";
-            string[] data1 = GetFileContent.GetDataFromFile(path);
+            ReadFile readfile = new ReadFile(path);
+            string[] data1 = readfile.data();
 
             List<string> list = new List<string>();
             System.IO.StreamReader file = new System.IO.StreamReader(path);
@@ -34,7 +35,7 @@ namespace BillSplitting.Tests
             file.Close();
             string[] data2 = list.ToArray();
 
-            Assert.AreEqual(data1[0],data2[0]);
+            Assert.AreEqual(data1[0], data2[0]);
         }
     }
 }

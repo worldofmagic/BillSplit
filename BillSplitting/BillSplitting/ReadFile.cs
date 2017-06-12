@@ -6,21 +6,24 @@ using System.Threading.Tasks;
 
 namespace BillSplitting
 {
-    public class GetFileContent
+    public class ReadFile
     {
+        private string path;
 
-        /// <summary>
-        /// get file content
-        /// </summary>
-        /// <param name="path">the path of input file</param>
-        /// <returns>a string list of file content</returns>
-        public static string[] GetDataFromFile(string path)
+
+        public ReadFile(string filepath)
         {
+            path = filepath;
+        }
+
+
+        public string[] data() {
+            string thispath = path;
             List<string> list = new List<string>();
             string line;
             try
             {
-                System.IO.StreamReader file = new System.IO.StreamReader(path);
+                System.IO.StreamReader file = new System.IO.StreamReader(thispath);
                 while ((line = file.ReadLine()) != null)
                 {
                     list.Add(line);
@@ -31,8 +34,11 @@ namespace BillSplitting
             {
                 Console.WriteLine(ex.ToString());
             }
-            
+
             return list.ToArray();
         }
+
+        
+        public string Path { get => path; set => path = value; }
     }
 }
